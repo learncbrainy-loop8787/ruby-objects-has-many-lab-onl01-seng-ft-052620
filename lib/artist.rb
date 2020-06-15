@@ -10,6 +10,10 @@ class Artist
     @@all << self
 end
 
+def song
+Song.all.select do |song|
+  song.artist == self
+
 def add_song(song)
     self.songs << song
     song.artist = self
